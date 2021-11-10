@@ -16,8 +16,8 @@ const queryUrlParam = (name, url = window.location.href) => {
 };
 ```
 ### 使用
-```
-const url = 'https://www.baidu.com/?id=1&user=iCodingShow';
-queryUrlParam(id, url); // 1
-queryUrlParam(user, url); // iCodingShow
+```javascript
+const testUrl = 'https://www.baidu.com/?id=1&user=iCodingShow';
+queryUrlParam('id', testUrl); // '1'
+queryUrlParam('user', testUrl); // 'iCodingShow'
 ```
