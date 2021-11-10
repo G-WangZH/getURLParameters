@@ -1,8 +1,8 @@
-# queryUrlParam
 # 查询URL中指定的参数值
+### 方法
 
 ```javascript
-export const queryUrlParam = (name, url = window.location.href) => {
+const queryUrlParam = (name, url = window.location.href) => {
     name = name.replace(/[\[\]]/g, '\\$&');
     const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
     const results = regex.exec(url);
@@ -14,4 +14,10 @@ export const queryUrlParam = (name, url = window.location.href) => {
     }
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 };
+```
+### 使用
+```
+const url = 'https://www.baidu.com/?id=1&user=iCodingShow';
+queryUrlParam(id, url); // 1
+queryUrlParam(user, url); // iCodingShow
 ```
