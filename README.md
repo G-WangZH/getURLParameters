@@ -1,5 +1,5 @@
 # 查询URL中指定的参数值
-### 方法
+### method
 
 ```javascript
 const queryUrlParam = (name, url = window.location.href) => {
@@ -15,7 +15,7 @@ const queryUrlParam = (name, url = window.location.href) => {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 };
 ```
-### 使用
+### usage
 ```javascript
 const testUrl = 'https://www.baidu.com/?id=1&user=iCodingShow';
 queryUrlParam('id', testUrl); // '1'
